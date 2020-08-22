@@ -12,6 +12,8 @@ function main {
     Install-ProductivityTools
 
     Install-DevTools
+
+    Install-DatabaseTools
 }
 
 function Update-Windows-Configuration {
@@ -100,14 +102,14 @@ function Install-DevTools {
 
     choco install -y docker-desktop
     
-    choco install -y azure-data-studio
-    
     choco install -y linqpad
 
+}
+
+function Install-DatabaseTools {
+    choco install -y azure-data-studio
     choco install -y dbeaver
-
     choco install -y sql-server-management-studio
-
 }
 
 function Install-ProductivityTools {
